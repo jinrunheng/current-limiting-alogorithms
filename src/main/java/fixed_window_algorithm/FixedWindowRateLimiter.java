@@ -11,7 +11,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class FixedWindowRateLimiter {
 
     // 时间窗口，单位毫秒
-    private static long window = 1000;
+    private static long window = 200;
     // QPS 阈值，即在时间窗口内允许的最大请求数
     private static int limit = 5;
     // 计数器
@@ -34,7 +34,7 @@ public class FixedWindowRateLimiter {
 
     public static void main(String[] args) throws InterruptedException {
         for (int i = 0; i < 50; i++) {
-            Thread.sleep(100);
+            Thread.sleep(10);
             if (tryAcquire()) {
                 System.out.println("请求通过");
             }else {
