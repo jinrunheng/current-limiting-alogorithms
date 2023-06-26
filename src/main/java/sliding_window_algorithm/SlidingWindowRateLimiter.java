@@ -1,8 +1,5 @@
 package sliding_window_algorithm;
 
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Vector;
 import java.util.concurrent.atomic.AtomicInteger;
 
