@@ -4,7 +4,7 @@ package sliding_window_algorithm;
  * @Author Dooby Kim
  * @Date 2023/6/26 6:38 下午
  * @Version 1.0
- * @Desc 子窗口
+ * @Desc 窗口区间定义
  */
 public class SubWindow {
     // 子窗口的开始时间，单位毫秒
