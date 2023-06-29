@@ -16,6 +16,13 @@ public class TokenBucketRateLimiter {
     // 桶中令牌的数量
     private long tokens;
 
+    public TokenBucketRateLimiter(long timeStamp, long capacity, long rate, long tokens) {
+        this.timeStamp = timeStamp;
+        this.capacity = capacity;
+        this.rate = rate;
+        this.tokens = tokens;
+    }
+
     public synchronized boolean tryAcquire() {
         // 生成令牌
         long currentTime = System.currentTimeMillis();
