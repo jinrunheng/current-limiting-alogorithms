@@ -22,7 +22,7 @@ public class LeakyBucketRateLimiter {
     public synchronized boolean tryAcquire(long water) {
         long currentTime = System.currentTimeMillis();
         // 需要漏掉的水量
-        long leak = (currentTime - leakTime) * rate / 1000;
+        long leak = (currentTime - leakTime) * rate;
         left = Math.max(0, left - leak);
         leakTime = currentTime;
 
